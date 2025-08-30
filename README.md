@@ -10,7 +10,7 @@ Minimal full-stack note-taking application using React + Vite (TypeScript) and N
 cd notes-app/server
 npm install
 create a .env
-# fill .env with MONGODB_URI, JWT_SECRET, GOOGLE_CLIENT_ID, FRONTEND_URL
+fill .env with MONGODB_URI, JWT_SECRET, GOOGLE_CLIENT_ID, FRONTEND_URL
 npm run dev
 
 3. Frontend
@@ -18,7 +18,7 @@ npm run dev
 cd ../client
 npm install
 create a .env
-# set VITE_API_URL and VITE_GOOGLE_CLIENT_ID
+set VITE_API_URL and VITE_GOOGLE_CLIENT_ID
 npm run dev
 
 Open [http://localhost:5173]
