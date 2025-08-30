@@ -13,7 +13,12 @@ dotenv.config()
 const app = express()
 app.use(express.json())
 const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173"
-app.use(cors({ origin: FRONTEND_URL.split(",").map(s => s.trim()) }))
+app.use(cors({
+  origin: [process.env.FRONTEND_URL || "http://localhost:5173"],
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}))
 
 const MONGODB_URI = process.env.MONGODB_URI || ""
 const JWT_SECRET = process.env.JWT_SECRET || "secret"
